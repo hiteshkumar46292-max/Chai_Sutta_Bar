@@ -1,0 +1,1490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chai Sutta Bar 🍺🍻 | Rajpur Road</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+
+        /* =========================
+           BASIC RESET
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background: #f7f1e7;
+            color: #2d1b12;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 82px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 6%;
+
+            background: rgba(25, 15, 10, 0.96);
+
+            z-index: 1000;
+
+            border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+        }
+
+        .logo {
+            color: #f5d58a;
+
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: 27px;
+            font-weight: 700;
+
+            white-space: nowrap;
+        }
+
+        .logo span {
+            color: #d4af37;
+        }
+
+        .logo small {
+            font-size: 14px;
+        }
+
+        .navbar nav {
+            display: flex;
+            gap: 28px;
+        }
+
+        .navbar nav a {
+            color: #eee;
+
+            font-size: 14px;
+            font-weight: 500;
+
+            transition: 0.3s;
+        }
+
+        .navbar nav a:hover {
+            color: #d4af37;
+        }
+
+        .nav-btn {
+            padding: 11px 20px;
+
+            color: #1d1009;
+            background: #d4af37;
+
+            border-radius: 30px;
+
+            font-size: 13px;
+            font-weight: 600;
+
+            transition: 0.3s;
+        }
+
+        .nav-btn:hover {
+            background: #f2d477;
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            height: 100vh;
+
+            position: relative;
+
+            display: flex;
+            align-items: center;
+
+            background-image: url("https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=2000&q=95");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-overlay {
+            position: absolute;
+
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(20, 10, 5, 0.92),
+                    rgba(20, 10, 5, 0.65),
+                    rgba(20, 10, 5, 0.30)
+                );
+        }
+
+        .hero-content {
+            position: relative;
+
+            max-width: 700px;
+
+            margin-left: 8%;
+
+            color: white;
+        }
+
+        .small-title {
+            color: #d4af37;
+
+            letter-spacing: 5px;
+
+            font-size: 13px;
+            font-weight: 600;
+
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: clamp(60px, 8vw, 105px);
+
+            line-height: 0.9;
+
+            margin-bottom: 30px;
+        }
+
+        .hero h1 span {
+            color: #d4af37;
+        }
+
+        .hero-text {
+            max-width: 550px;
+
+            font-size: 17px;
+            line-height: 1.8;
+
+            color: #eee;
+
+            margin-bottom: 35px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .primary-btn,
+        .secondary-btn {
+            display: inline-block;
+
+            padding: 14px 27px;
+
+            border-radius: 30px;
+
+            font-weight: 600;
+
+            transition: 0.3s;
+        }
+
+        .primary-btn {
+            background: #d4af37;
+            color: #21120b;
+        }
+
+        .primary-btn:hover {
+            background: #f0d477;
+            transform: translateY(-3px);
+        }
+
+        .secondary-btn {
+            border: 1px solid #d4af37;
+            color: white;
+        }
+
+        .secondary-btn:hover {
+            background: #d4af37;
+            color: #21120b;
+        }
+
+
+        /* =========================
+           COMMON SECTION
+        ========================= */
+
+        .section {
+            padding: 110px 8%;
+        }
+
+        .section-heading {
+            text-align: center;
+
+            max-width: 650px;
+
+            margin: 0 auto 60px;
+        }
+
+        .section-label {
+            color: #a27618;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            letter-spacing: 4px;
+
+            margin-bottom: 10px;
+        }
+
+        .section-heading h2,
+        .about-content h2,
+        .contact-info h2 {
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: clamp(42px, 5vw, 65px);
+
+            line-height: 1;
+
+            margin-bottom: 20px;
+        }
+
+        .section-heading h2 span,
+        .about-content h2 span,
+        .contact-info h2 span {
+            color: #a27618;
+        }
+
+        .section-heading > p:last-child {
+            color: #765e50;
+            line-height: 1.7;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 80px;
+
+            align-items: center;
+
+            background: #f7f1e7;
+        }
+
+        .about-image {
+            height: 600px;
+
+            overflow: hidden;
+
+            border-radius: 5px;
+
+            box-shadow: 20px 20px 0 #d4af37;
+        }
+
+        .about-image img {
+            height: 100%;
+            object-fit: cover;
+
+            transition: 0.6s;
+        }
+
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .about-content > p:not(.section-label) {
+            color: #665248;
+
+            line-height: 1.9;
+
+            margin-bottom: 18px;
+        }
+
+        .about-features {
+            display: flex;
+
+            gap: 35px;
+
+            margin-top: 35px;
+        }
+
+        .about-features div {
+            text-align: center;
+        }
+
+        .about-features strong {
+            font-size: 30px;
+        }
+
+        .about-features p {
+            margin-top: 8px;
+
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+
+        /* =========================
+           MENU
+        ========================= */
+
+        .menu {
+            background: #21130d;
+
+            color: white;
+        }
+
+        .menu .section-heading > p:last-child {
+            color: #cbbdb4;
+        }
+
+        .menu .section-label {
+            color: #d4af37;
+        }
+
+        .menu .section-heading h2 span {
+            color: #d4af37;
+        }
+
+        .menu-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .menu-card {
+            background: #2c1a12;
+
+            border: 1px solid rgba(212, 175, 55, 0.15);
+
+            overflow: hidden;
+
+            border-radius: 5px;
+
+            transition: 0.4s;
+        }
+
+        .menu-card:hover {
+            transform: translateY(-8px);
+
+            border-color: #d4af37;
+
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+        }
+
+        .menu-card img {
+            height: 245px;
+
+            object-fit: cover;
+
+            transition: 0.5s;
+        }
+
+        .menu-card:hover img {
+            transform: scale(1.06);
+        }
+
+        .menu-info {
+            padding: 22px;
+        }
+
+        .menu-title {
+            display: flex;
+
+            justify-content: space-between;
+            align-items: center;
+
+            gap: 15px;
+
+            margin-bottom: 10px;
+        }
+
+        .menu-title h3 {
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: 25px;
+        }
+
+        .menu-title strong {
+            color: #d4af37;
+
+            white-space: nowrap;
+        }
+
+        .menu-info > p {
+            color: #bbaea6;
+
+            font-size: 13px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =========================
+           GALLERY
+        ========================= */
+
+        .gallery {
+            background: #f7f1e7;
+        }
+
+        .gallery-grid {
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            grid-auto-rows: 230px;
+
+            gap: 15px;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+
+            border-radius: 5px;
+        }
+
+        .gallery-item.large {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: 0.5s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+
+
+        /* =========================
+           WHY US
+        ========================= */
+
+        .why {
+            background: #eee2d0;
+        }
+
+        .why-grid {
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+        .why-card {
+            text-align: center;
+
+            padding: 45px 25px;
+
+            background: #f8f2e8;
+
+            border: 1px solid rgba(162, 118, 24, 0.15);
+
+            transition: 0.4s;
+        }
+
+        .why-card:hover {
+            transform: translateY(-7px);
+
+            box-shadow: 0 15px 30px rgba(45, 27, 18, 0.12);
+        }
+
+        .icon {
+            font-size: 42px;
+
+            margin-bottom: 20px;
+        }
+
+        .why-card h3 {
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: 27px;
+
+            margin-bottom: 12px;
+        }
+
+        .why-card p {
+            color: #735f53;
+
+            font-size: 13px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+            background: #21130d;
+        }
+
+        .contact-box {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            background: #f7f1e7;
+
+            overflow: hidden;
+        }
+
+        .contact-info {
+            padding: 70px;
+        }
+
+        .contact-info > p:not(.section-label) {
+            color: #665248;
+
+            line-height: 1.8;
+
+            margin-bottom: 30px;
+        }
+
+        .contact-details {
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 20px;
+
+            margin-bottom: 35px;
+        }
+
+        .contact-details > div {
+            display: flex;
+
+            align-items: flex-start;
+
+            gap: 15px;
+        }
+
+        .contact-details span {
+            font-size: 22px;
+        }
+
+        .contact-details strong {
+            font-size: 14px;
+        }
+
+        .contact-details p {
+            color: #765e50;
+
+            font-size: 13px;
+
+            margin-top: 3px;
+        }
+
+        .contact-image {
+            min-height: 550px;
+        }
+
+        .contact-image img {
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            padding: 60px 20px 30px;
+
+            text-align: center;
+
+            background: #130b07;
+
+            color: white;
+        }
+
+        .footer-logo {
+            font-family: "Cormorant Garamond", serif;
+
+            color: #d4af37;
+
+            font-size: 35px;
+
+            font-weight: 700;
+
+            margin-bottom: 10px;
+        }
+
+        footer > p {
+            color: #a99a91;
+
+            font-size: 13px;
+        }
+
+        .socials {
+            display: flex;
+
+            justify-content: center;
+
+            gap: 25px;
+
+            margin: 25px 0;
+        }
+
+        .socials a {
+            color: #ddd;
+
+            font-size: 13px;
+
+            transition: 0.3s;
+        }
+
+        .socials a:hover {
+            color: #d4af37;
+        }
+
+        .footer-line {
+            width: 80px;
+            height: 1px;
+
+            margin: 25px auto;
+
+            background: #d4af37;
+        }
+
+        .copyright {
+            font-size: 12px;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 1000px) {
+
+            .navbar nav {
+                display: none;
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+
+                gap: 50px;
+            }
+
+            .about-image {
+                height: 500px;
+            }
+
+            .menu-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .why-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .contact-box {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-image {
+                min-height: 400px;
+            }
+        }
+
+
+        @media (max-width: 650px) {
+
+            .navbar {
+                height: 70px;
+
+                padding: 0 5%;
+            }
+
+            .logo {
+                font-size: 22px;
+            }
+
+            .nav-btn {
+                padding: 9px 14px;
+
+                font-size: 11px;
+            }
+
+            .hero {
+                min-height: 750px;
+            }
+
+            .hero-content {
+                margin: 0 7%;
+            }
+
+            .hero h1 {
+                font-size: 65px;
+            }
+
+            .hero-text {
+                font-size: 14px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+
+                width: 180px;
+            }
+
+            .section {
+                padding: 80px 6%;
+            }
+
+            .about-image {
+                height: 400px;
+
+                box-shadow: 10px 10px 0 #d4af37;
+            }
+
+            .about-features {
+                gap: 15px;
+            }
+
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr 1fr;
+
+                grid-auto-rows: 180px;
+            }
+
+            .gallery-item.large {
+                grid-column: span 2;
+                grid-row: span 1;
+            }
+
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-info {
+                padding: 45px 25px;
+            }
+
+            .contact-image {
+                min-height: 350px;
+            }
+
+            .footer-logo {
+                font-size: 28px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            <span>☕</span>
+            Chai Sutta Bar
+            <small>🍺🍻</small>
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#menu">Menu</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#why">Why Us</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <a href="#contact" class="nav-btn">
+            Book a Table
+        </a>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section id="home" class="hero">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <p class="small-title">
+                WELCOME TO
+            </p>
+
+            <h1>
+                Chai <span>Sutta</span> Bar
+            </h1>
+
+            <p class="hero-text">
+                Where every cup tells a story and every bite
+                creates a memory.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#menu" class="primary-btn">
+                    Explore Menu
+                </a>
+
+                <a href="#contact" class="secondary-btn">
+                    Visit Us
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about" class="about section">
+
+        <div class="about-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1200&q=90"
+                alt="Cafe Interior">
+
+        </div>
+
+
+        <div class="about-content">
+
+            <p class="section-label">
+                OUR STORY
+            </p>
+
+            <h2>
+                More Than Just
+                <span>A Cup Of Chai</span>
+            </h2>
+
+            <p>
+                Welcome to Chai Sutta Bar, a cozy place where
+                traditional Indian chai meets modern café vibes.
+            </p>
+
+            <p>
+                Whether you want to enjoy a peaceful cup of chai,
+                hang out with friends, enjoy delicious momos and
+                noodles, or simply spend some quality time —
+                we've got you covered.
+            </p>
+
+
+            <div class="about-features">
+
+                <div>
+                    <strong>☕</strong>
+                    <p>Fresh Chai</p>
+                </div>
+
+                <div>
+                    <strong>🥟</strong>
+                    <p>Fresh Snacks</p>
+                </div>
+
+                <div>
+                    <strong>✨</strong>
+                    <p>Good Vibes</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= MENU ================= -->
+
+    <section id="menu" class="menu section">
+
+        <div class="section-heading">
+
+            <p class="section-label">
+                OUR SPECIALS
+            </p>
+
+            <h2>
+                Taste That Brings
+                <span>You Back</span>
+            </h2>
+
+            <p>
+                Freshly prepared favourites made for chai lovers.
+            </p>
+
+        </div>
+
+
+        <div class="menu-grid">
+
+
+            <!-- MASALA CHAI -->
+
+            <div class="menu-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=900&q=90"
+                    alt="Masala Chai">
+
+                <div class="menu-info">
+
+                    <div class="menu-title">
+
+                        <h3>
+                            Masala Chai
+                        </h3>
+
+                        <strong>
+                            ₹60
+                        </strong>
+
+                    </div>
+
+                    <p>
+                        Aromatic Indian tea with traditional spices.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- MOMOS -->
+
+            <div class="menu-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=900&q=90"
+                    alt="Momos">
+
+                <div class="menu-info">
+
+                    <div class="menu-title">
+
+                        <h3>
+                            Veg Momos
+                        </h3>
+
+                        <strong>
+                            ₹120
+                        </strong>
+
+                    </div>
+
+                    <p>
+                        Soft steamed momos served with spicy chutney.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- NOODLES -->
+
+            <div class="menu-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=900&q=90"
+                    alt="Noodles">
+
+                <div class="menu-info">
+
+                    <div class="menu-title">
+
+                        <h3>
+                            Chilli Garlic Noodles
+                        </h3>
+
+                        <strong>
+                            ₹150
+                        </strong>
+
+                    </div>
+
+                    <p>
+                        Hot, spicy and loaded with fresh vegetables.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- COFFEE -->
+
+            <div class="menu-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=90"
+                    alt="Coffee">
+
+                <div class="menu-info">
+
+                    <div class="menu-title">
+
+                        <h3>
+                            Café Coffee
+                        </h3>
+
+                        <strong>
+                            ₹100
+                        </strong>
+
+                    </div>
+
+                    <p>
+                        Rich, creamy coffee for your perfect evening.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- SANDWICH -->
+
+            <div class="menu-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=900&q=90"
+                    alt="Sandwich">
+
+                <div class="menu-info">
+
+                    <div class="menu-title">
+
+                        <h3>
+                            Classic Sandwich
+                        </h3>
+
+                        <strong>
+                            ₹130
+                        </strong>
+
+                    </div>
+
+                    <p>
+                        Fresh vegetables with our special café sauce.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- FRIES -->
+
+            <div class="menu-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=900&q=90"
+                    alt="French Fries">
+
+                <div class="menu-info">
+
+                    <div class="menu-title">
+
+                        <h3>
+                            Classic Fries
+                        </h3>
+
+                        <strong>
+                            ₹110
+                        </strong>
+
+                    </div>
+
+                    <p>
+                        Crispy golden fries served hot and fresh.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= GALLERY ================= -->
+
+    <section id="gallery" class="gallery section">
+
+        <div class="section-heading">
+
+            <p class="section-label">
+                OUR SPACE
+            </p>
+
+            <h2>
+                A Place To
+                <span>Relax & Enjoy</span>
+            </h2>
+
+        </div>
+
+
+        <div class="gallery-grid">
+
+            <div class="gallery-item large">
+
+                <img
+                    src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1200&q=90"
+                    alt="Cafe Interior">
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=900&q=90"
+                    alt="Restaurant Interior">
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=90"
+                    alt="Coffee">
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=900&q=90"
+                    alt="Chai">
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=900&q=90"
+                    alt="Momos">
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= WHY US ================= -->
+
+    <section id="why" class="why section">
+
+        <div class="section-heading">
+
+            <p class="section-label">
+                WHY CHOOSE US
+            </p>
+
+            <h2>
+                Made With
+                <span>Love & Passion</span>
+            </h2>
+
+        </div>
+
+
+        <div class="why-grid">
+
+
+            <div class="why-card">
+
+                <div class="icon">
+                    ☕
+                </div>
+
+                <h3>
+                    Fresh Chai
+                </h3>
+
+                <p>
+                    Every cup is prepared fresh with quality ingredients.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="icon">
+                    🥘
+                </div>
+
+                <h3>
+                    Fresh Food
+                </h3>
+
+                <p>
+                    Delicious snacks prepared fresh for every order.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="icon">
+                    🏠
+                </div>
+
+                <h3>
+                    Cozy Atmosphere
+                </h3>
+
+                <p>
+                    A warm and comfortable place to spend time with friends.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="icon">
+                    ❤️
+                </div>
+
+                <h3>
+                    Good Vibes
+                </h3>
+
+                <p>
+                    Great conversations, delicious food and unforgettable moments.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section id="contact" class="contact section">
+
+        <div class="contact-box">
+
+
+            <div class="contact-info">
+
+                <p class="section-label">
+                    COME VISIT US
+                </p>
+
+                <h2>
+                    Let's Share A
+                    <span>Cup Of Chai</span>
+                </h2>
+
+                <p>
+                    Come with friends, stay for the vibes.
+                    Your perfect café experience is waiting for you.
+                </p>
+
+
+                <div class="contact-details">
+
+
+                    <div>
+
+                        <span>📍</span>
+
+                        <div>
+
+                            <strong>
+                                Address
+                            </strong>
+
+                            <p>
+                                Rajpur Road, Near by Canal Chock
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>🕐</span>
+
+                        <div>
+
+                            <strong>
+                                Opening Hours
+                            </strong>
+
+                            <p>
+                                10:00 AM – 11:00 PM
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>📞</span>
+
+                        <div>
+
+                            <strong>
+                                Call Us
+                            </strong>
+
+                            <p>
+                                +91 7535936213
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <a href="tel:+917535936213" class="primary-btn">
+                    Book a Table
+                </a>
+
+            </div>
+
+
+            <div class="contact-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1200&q=90"
+                    alt="Cafe">
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-logo">
+            ☕ Chai Sutta Bar 🍺🍻
+        </div>
+
+        <p>
+            Good chai. Good food. Good people. Good memories.
+        </p>
+
+
+        <div class="socials">
+
+            <a href="#">
+                Instagram
+            </a>
+
+            <a href="#">
+                Facebook
+            </a>
+
+            <a href="#">
+                WhatsApp
+            </a>
+
+        </div>
+
+
+        <div class="footer-line"></div>
+
+
+        <p class="copyright">
+            © 2026 Chai Sutta Bar. All Rights Reserved.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
